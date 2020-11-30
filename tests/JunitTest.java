@@ -13,6 +13,16 @@ import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * test class to {@link WGraph_DS} and {@link WGraph_Algo}
+ * each assert have Explain what he is checking.
+ * 32 assertEquals
+ * 5 assertTrue
+ * 8 assertFalse
+ *
+ *
+ *
+ */
 public class JunitTest {
 
     private static Random _rnd = null;
@@ -131,7 +141,6 @@ public class JunitTest {
         copyG.addNode(2);
         assertNotEquals(ga.getGraph(),copyG);
         g.addNode(2);
-       // assertNotEquals(g,copyG);//Although both graphs have 2 node having the same key still the graphs themselves are not equal.
 
         weighted_graph g1 = new WGraph_DS();
         weighted_graph_algorithms ga1 = new WGraph_Algo();
@@ -149,7 +158,7 @@ public class JunitTest {
         assertEquals(2,g1.getV().size());
         assertEquals(2,copyG1.getV().size());
 
-        copyG1.addNode(4);//copy chaage
+        copyG1.addNode(4);//copy change but g1 dont
         assertEquals(3,copyG1.getV().size());
         assertEquals(2,g1.getV().size());
 
